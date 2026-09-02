@@ -1,0 +1,95 @@
+{
+  "info": {
+    "name": "Mini IELTS Speaking API",
+    "description": "API Documentation for Mini IELTS Speaking Evaluation Backend Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Get All Questions",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/speaking/questions",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "speaking",
+            "questions"
+          ]
+        }
+      }
+    },
+    {
+      "name": "2. Submit Speaking Answer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question_id\": 1,\n    \"answer\": \"I am currently a student studying computer science at a local university in my hometown.\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/speaking/submit",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "speaking",
+            "submit"
+          ]
+        }
+      }
+    },
+    {
+      "name": "3. Get Evaluation History",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/speaking/attempts",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "speaking",
+            "attempts"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000/api",
+      "type": "string"
+    }
+  ]
+}
