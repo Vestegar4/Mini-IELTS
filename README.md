@@ -5,7 +5,7 @@ Sebuah aplikasi web sederhana (Full-stack) untuk latihan IELTS Speaking. Aplikas
 ## Fitur Utama
 - **Backend API:** RESTful API menggunakan Laravel untuk mengelola data soal dan histori evaluasi.
 - **AI Integration:** Terintegrasi dengan Google Gemini AI (versi fallback/stabil) untuk mengevaluasi jawaban bahasa Inggris.
-- **Graceful Fallback:** Sistem akan mengembalikan *mock response* secara otomatis jika server AI sedang *overloaded* (503).
+- **Graceful Fallback:** Sistem akan mengembalikan *mock response* secara otomatis jika server AI sedang *overloaded* (500).
 - **Frontend Dashboard:** Antarmuka interaktif menggunakan Vue.js dan Tailwind CSS (Vite).
 - **Automated Testing:** Feature test menggunakan HTTP Mocking untuk menguji logika evaluasi tanpa memerlukan koneksi internet.
 
