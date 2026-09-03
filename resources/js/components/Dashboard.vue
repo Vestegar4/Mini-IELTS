@@ -1,10 +1,10 @@
 <template>
   <div class="max-w-5xl mx-auto py-10 px-5">
-    <h1 class="text-3xl font-bold text-center mb-10 text-blue-600">Mini IELTS Speaking Evaluation</h1>
+    <h1 class="text-3xl font-bold text-center mb-10 text-[#7FDEFF]">Mini IELTS Speaking Evaluation</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Kolom Kiri: Form Latihan -->
-      <div class="bg-white p-6 rounded-lg shadow-md h-fit">
+      <div class="bg-[#907AD6] p-6 rounded-lg shadow-md h-fit">
         <h2 class="text-xl font-semibold mb-4">Practice Now</h2>
         
         <div class="mb-4">
@@ -26,13 +26,13 @@
           <textarea v-model="form.answer" rows="5" class="w-full border p-2 rounded" placeholder="Type your answer here..."></textarea>
         </div>
 
-        <button @click="submitAnswer" :disabled="loading" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 disabled:opacity-50">
+        <button @click="submitAnswer" :disabled="loading" class="w-full bg-[#7FDEFF] text-gray-700 font-bold py-2 px-4 rounded hover:bg-[#0099CC] disabled:opacity-50">
           {{ loading ? 'Evaluating with AI...' : 'Submit Answer' }}
         </button>
       </div>
 
       <!-- Kolom Kanan: Riwayat Evaluasi -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
+      <div class="bg-[#DABFFF] p-6 rounded-lg shadow-md">
         <h2 class="text-xl font-semibold mb-4">Your Evaluation History</h2>
         
         <div v-if="attempts.length === 0" class="text-gray-500 text-center py-4">
@@ -48,10 +48,10 @@
             <p class="text-sm text-gray-600 italic mb-3">"{{ attempt.answer }}"</p>
             
             <div class="grid grid-cols-1 gap-2 text-sm">
-              <div class="bg-green-50 p-2 rounded border border-green-200">
+              <div class="bg-[#8DF7E2] p-2 rounded border border-green-200">
                 <strong class="text-green-700">Strengths:</strong> {{ attempt.strengths }}
               </div>
-              <div class="bg-yellow-50 p-2 rounded border border-yellow-200">
+              <div class="bg-[#FCF0CC] p-2 rounded border border-yellow-200">
                 <strong class="text-yellow-700">To Improve:</strong> {{ attempt.improvements }}
               </div>
             </div>

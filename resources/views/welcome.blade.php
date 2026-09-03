@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     @vite(['resources/js/app.js'])
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-[#2C2A4A] text-gray-800">
     <div id="app"></div>
 </body>
 </html>
